@@ -209,3 +209,6 @@ __marimo__/
 
 # Raw files
 data/raw
+
+# Models
+models/
