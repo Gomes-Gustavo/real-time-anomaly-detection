@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "real-time-anomaly-detection"
+version = "0.1.0"
+description = "API for real-time anomaly detection using a trained Isolation Forest model."
+authors = ["Gustavo Gomes <gustavo.agomes@outlook.com>"]
+readme = "README.md"
+
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "0.116.1"
+scikit-learn = "1.7.1"
+pandas = "2.3.1"
+numpy = "2.2.6"
+joblib = "1.5.1"
+uvicorn = {extras = ["standard"], version = "^0.35.0"}
+
+[tool.poetry.group.dev.dependencies]
+matplotlib = "3.10.3"
+seaborn = "0.13.2"
+notebook = "^7.2.1"
+pytest = "^8.3.2"
+httpx = "^0.27.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

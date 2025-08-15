@@ -1,0 +1,20 @@
+# Git files
+.git
+.gitignore
+
+# Python virtual environment
+.venv
+venv
+__pycache__/
+
+# Project artifacts and data not needed in the final image
+notebooks/
+data/
+results/
+
+# Test cache
+.pytest_cache/
+
+# Docker files
+Dockerfile
+.dockerignore
