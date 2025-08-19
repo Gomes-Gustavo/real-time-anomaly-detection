@@ -213,3 +213,5 @@ data/raw
 # Init files
 __init__.py
 
+# Models
+models/
