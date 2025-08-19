@@ -27,7 +27,7 @@ jobs:
           virtualenvs-in-project: true
 
       - name: Install dependencies
-        run: poetry install --only main
+        run: poetry install
 
       - name: Create models directory
         run: mkdir -p models
