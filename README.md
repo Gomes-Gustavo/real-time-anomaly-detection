@@ -22,7 +22,7 @@ This project implements a robust system for identifying anomalies in CPU utiliza
 -   Automated testing with Pytest.
 -   Dependency and environment management with Poetry.
 -   Containerization with Docker.
--   CI/CD automation with GitHub Actions.
+-   CI (Continuous Integration): A GitHub Actions workflow that automatically tests the application and validates the Docker build on every push.
 -   Artifact management with GitHub Releases.
 
 ## Dataset
@@ -38,17 +38,17 @@ The diagram below illustrates the end-to-end architecture of the MLOps pipeline.
 
 ```mermaid
 graph TD
-    subgraph "1. Modeling & Experimentation"
+    subgraph " Modeling"
         A[Notebooks for EDA & Training] --> B{Model Comparison};
         B -- Best Model --> C[IsolationForest Model];
         C -- Versioned --> R[GitHub Release v1.0.0];
     end
 
-    subgraph "2. Application"
+    subgraph " Application"
         D[FastAPI Code] -- Loads --> R;
     end
     
-    subgraph "3. Deployment & CI/CD"
+    subgraph " Deployment & CI"
         G[Dockerfile] -- Packages --> D;
         R -- Is used in build by --> G;
         G --> H[Docker Image];
@@ -59,8 +59,8 @@ graph TD
         R -- Used by --> T;
     end
 
-    style R fill:#f9f,stroke:#333,stroke-width:2px
-    style H fill:#add8e6,stroke:#333,stroke-width:2px
+    style R fill:#f0f8ff,stroke:#333,stroke-width:2px
+    style H fill:#f0f8ff,stroke:#333,stroke-width:2px
 ```
 
 ## Project Structure
